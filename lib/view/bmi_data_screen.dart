@@ -37,7 +37,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     },
                     child: BmiCard(
                       borderColor:
-                          (gender == "male") ? Colors.white : primaryColor,
+                          (gender == "male") ? Colors.black : primaryColor,
                       child: const GenderIconText(
                         icon: Icons.male,
                         tittle: 'Male',
@@ -53,7 +53,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     },
                     child: BmiCard(
                       borderColor:
-                          (gender == "female") ? Colors.white : primaryColor,
+                          (gender == "female") ? Colors.black : primaryColor,
                       child: const GenderIconText(
                         icon: Icons.female,
                         tittle: 'Female',
@@ -94,8 +94,9 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     value: height.toDouble(),
                     min: 80,
                     max: 200,
-                    thumbColor: Colors.red,
-                    activeColor: Colors.white,
+                    thumbColor: Colors.blue,
+                    activeColor: Colors.black,
+                    inactiveColor: Colors.grey,
                     onChanged: (value) {
                       height = value.toInt();
                       setState(() {});
@@ -125,24 +126,6 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                           children: [
                             RawMaterialButton(
                               onPressed: () {
-                                weight++;
-                                setState(() {});
-                              },
-                              elevation: 0,
-                              child: const Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                              shape: const CircleBorder(),
-                              fillColor: const Color(0xff212747),
-                              constraints: const BoxConstraints.tightFor(
-                                width: 56,
-                                height: 56,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            RawMaterialButton(
-                              onPressed: () {
                                 if (weight > 0) {
                                   weight--;
                                   setState(() {});
@@ -159,7 +142,25 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                                 width: 56,
                                 height: 56,
                               ),
-                            )
+                            ),
+                            const SizedBox(width: 10),
+                            RawMaterialButton(
+                              onPressed: () {
+                                weight++;
+                                setState(() {});
+                              },
+                              elevation: 0,
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              shape: const CircleBorder(),
+                              fillColor: const Color(0xff212747),
+                              constraints: const BoxConstraints.tightFor(
+                                width: 56,
+                                height: 56,
+                              ),
+                            ),
                           ],
                         )
                       ],
@@ -185,24 +186,6 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                           children: [
                             RawMaterialButton(
                               onPressed: () {
-                                age++;
-                                setState(() {});
-                              },
-                              elevation: 0,
-                              child: const Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                              shape: const CircleBorder(),
-                              fillColor: const Color(0xff212747),
-                              constraints: const BoxConstraints.tightFor(
-                                width: 56,
-                                height: 56,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            RawMaterialButton(
-                              onPressed: () {
                                 if (age > 0) {
                                   age--;
                                   setState(() {});
@@ -219,7 +202,25 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                                 width: 56,
                                 height: 56,
                               ),
-                            )
+                            ),
+                            const SizedBox(width: 10),
+                            RawMaterialButton(
+                              onPressed: () {
+                                age++;
+                                setState(() {});
+                              },
+                              elevation: 0,
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              shape: const CircleBorder(),
+                              fillColor: const Color(0xff212747),
+                              constraints: const BoxConstraints.tightFor(
+                                width: 56,
+                                height: 56,
+                              ),
+                            ),
                           ],
                         )
                       ],
@@ -246,7 +247,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
               },
               child: Container(
                 height: 80,
-                color: const Color(0xffEC3C66),
+                color: const Color(0xff3498DB),
                 child: const Center(
                     child: Text(
                   "Hitung BMI",
@@ -276,7 +277,7 @@ class BmiCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          color: const Color(0xff272A4E),
+          color: const Color(0xffECF0F1),
           borderRadius: BorderRadius.circular(15),
           border: Border.all(color: borderColor!),
         ),
@@ -303,7 +304,7 @@ class GenderIconText extends StatelessWidget {
         Icon(
           icon,
           size: 80,
-          color: Colors.white,
+          color: Colors.black,
         ),
         const SizedBox(
           height: 15,

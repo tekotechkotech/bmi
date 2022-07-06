@@ -44,9 +44,9 @@ class BmiResultScreen extends StatelessWidget {
                       Text(
                         bmiCalculator.bmiCategory!,
                         style: const TextStyle(
-                          fontSize: 20,
+                          fontSize: 40,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Color(0xff212747),
                         ),
                       ),
                       Text(
@@ -54,15 +54,15 @@ class BmiResultScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 100,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Color(0xff212747),
                         ),
                       ),
                       Text(
                         bmiCalculator.bmiDescription!,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
-                          fontSize: 15,
-                          color: Colors.white,
+                          fontSize: 30,
+                          color: Color(0xff212747),
                         ),
                       ),
                     ]),
@@ -75,7 +75,7 @@ class BmiResultScreen extends StatelessWidget {
             },
             child: Container(
               height: 80,
-              color: const Color(0xffEC3C66),
+              color: const Color(0xff3498DB),
               child: const Center(
                   child: Text(
                 "Hitung Ulang",
