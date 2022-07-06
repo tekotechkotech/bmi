@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Color(0xff2C3E50);
+const Color primaryColor = Color.fromARGB(255, 0, 0, 0);
+const Color secondaryColor = Color.fromARGB(255, 207, 207, 207);
+const Color tersierColor = Color.fromARGB(255, 0, 26, 255);
 
 TextStyle labelTextStyle =
-    const TextStyle(fontSize: 24, color: Color(0xff02C3E50) //Color(0xff8d8e98),
+    const TextStyle(fontSize: 24, color: tersierColor //Color(0xff8d8e98),
         );
 
 TextStyle numberTextStyle = const TextStyle(
   fontSize: 60,
   fontWeight: FontWeight.bold,
-  color: Color(0xff02C3E50),
+  color: tersierColor,
 );
 
-const String underWeightSevere = "Underweight (Severe thinness)";
-const String underWeightModerate = "Underweight (Moderate thinness)";
-const String underWeightMild = "Underweight (Mild thinness)";
+const String underWeightSevere = "Kurus (Terlalu Kurus)";
+const String underWeightModerate = "Kurus (Kurus Menengah)";
+const String underWeightMild = "Kurus (Kurus Normal)";
 const String normal = "Normal";
-const String overWeight = "Overweight";
-const String obeseI = "Obese (Class I)";
-const String obeseII = "Obese (Class II)";
-const String obeseIII = "Obese (Class III)";
+const String overWeight = "Gemuk";
+const String obeseI = "Obesitas (Kelas I)";
+const String obeseII = "Obesitas (Kelas II)";
+const String obeseIII = "Obesitas (Kelas III)";

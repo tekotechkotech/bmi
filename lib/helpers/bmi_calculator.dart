@@ -50,20 +50,20 @@ class BmiCalculator {
       case underWeightSevere:
       case underWeightModerate:
       case underWeightMild:
-        desc = "Possible nutritional deficiency and osteoporosis.";
+        desc = "Kemungkinan kekurangan nutrisi dan osteoporosis.";
         break;
       case normal:
-        desc = "Low Risk (healthy range).";
+        desc = "Resiko Kesehatan Rendah";
         break;
       case overWeight:
         desc =
-            "Moderate risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
+            "Memiliki risiko terkena penyakit jantung, tekanan darah tinggi, stroke, diabetes mellitus.";
         break;
       case obeseI:
       case obeseII:
       case obeseIII:
         desc =
-            "High risk of developing heart disease, high blood pressure, stroke, diabetes mellitus.";
+            "Resiko tinggi terkena penyakit jantung, tekanan darah tinggi, stroke, diabetes mellitus.";
         break;
 
       default:

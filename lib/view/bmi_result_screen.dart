@@ -1,3 +1,4 @@
+import 'package:bmi/constants/constant.dart';
 import 'package:bmi/helpers/bmi_calculator.dart';
 import 'package:bmi/view/bmi_data_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class BmiResultScreen extends StatelessWidget {
     bmiCalculator.getHealthRiskDescription();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Hasil Hitung BMI'),
       ),
@@ -27,7 +29,7 @@ class BmiResultScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
@@ -46,7 +48,7 @@ class BmiResultScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff212747),
+                          color: primaryColor,
                         ),
                       ),
                       Text(
@@ -54,7 +56,7 @@ class BmiResultScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 100,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff212747),
+                          color: primaryColor,
                         ),
                       ),
                       Text(
@@ -62,7 +64,7 @@ class BmiResultScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 30,
-                          color: Color(0xff212747),
+                          color: primaryColor,
                         ),
                       ),
                     ]),
@@ -75,7 +77,7 @@ class BmiResultScreen extends StatelessWidget {
             },
             child: Container(
               height: 80,
-              color: const Color(0xff3498DB),
+              color: tersierColor,
               child: const Center(
                   child: Text(
                 "Hitung Ulang",
